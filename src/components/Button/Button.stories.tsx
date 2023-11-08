@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ReactComponent as EmailIcon } from '../../assets/icons/email.svg'
+import { userEvent } from '@storybook/testing-library'
 import { Button } from './Button'
 
 const meta = {
@@ -45,5 +46,20 @@ export const WithIcon: Story = {
         <EmailIcon />
       </>
     ),
+  },
+}
+
+export const Tests: Story = {
+  args: {
+    children: 'click me',
+  },
+  play: async ({ canvasElement }) => {
+    const button = canvasElement.querySelector('button')
+
+    if (!button) {
+      throw new Error('Button not found')
+    }
+
+    await userEvent.click(button)
   },
 }
