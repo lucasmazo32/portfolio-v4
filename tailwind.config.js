@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const defaultTheme = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,7 +8,11 @@ export default {
     'node_modules/daisyui/dist/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Rubik', ...defaultTheme.fontFamily.sans]
+      }
+    },
   },
   daisyui: {
     themes: [

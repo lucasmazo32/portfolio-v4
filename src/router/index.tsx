@@ -1,11 +1,29 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { HomePage, MainLayout } from './lazyComponents'
+import { createBrowserRouter } from "react-router-dom"
+import { AboutPage, HomePage, MainLayout } from "./lazyComponents"
+import { Suspense } from "react"
 
 // Routes
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <MainLayout />,
-    children: [{ path: '', element: <HomePage /> }],
+    children: [
+      {
+        path: "",
+        element: (
+          <Suspense>
+            <HomePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "about",
+        element: (
+          <Suspense>
+            <AboutPage />
+          </Suspense>
+        ),
+      },
+    ],
   },
 ])

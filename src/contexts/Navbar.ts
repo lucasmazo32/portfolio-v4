@@ -4,6 +4,7 @@ interface NavbarContextData {
   componentOnClick?: MouseEventHandler<HTMLButtonElement>
   aboutOnClick?: MouseEventHandler<HTMLButtonElement>
   contactOnClick?: MouseEventHandler<HTMLButtonElement>
+  homeOnClick?: MouseEventHandler<HTMLButtonElement>
 }
 
 export const NavbarContext = createContext<NavbarContextData>({})
