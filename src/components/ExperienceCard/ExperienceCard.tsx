@@ -12,10 +12,10 @@ export const ExperienceCard: FC<ExperienceCardProps> = memo(
   ({ src, company, position, description, ...props }) => {
     return (
       <div className="flex flex-col items-center gap-2 p-2" {...props}>
-        <Image className="h-12 w-12" overridePadding="p-px" src={src} />
-        <h2 className="text-base leading-5 font-semibold">{company}</h2>
-        <h3 className="text-sm leading-4 font-semibold">{position}</h3>
-        <p className="text-sm font-normal">{description}</p>
+        <Image className="h-14 w-14" overridePadding="p-px" src={src} />
+        <h2 className="text-xl leading-5 font-semibold">{company}</h2>
+        <h3 className="text-lg leading-4 font-semibold">{position}</h3>
+        <p className="text-base font-normal">{description}</p>
       </div>
     )
   }

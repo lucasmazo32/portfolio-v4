@@ -6,7 +6,7 @@ import { useNavbarContext } from '@/contexts'
 export const Navbar: FC = memo(() => {
   const { aboutOnClick, componentOnClick, homeOnClick } = useNavbarContext()
   return (
-    <div className="navbar">
+    <div className="navbar bg-base-100 sticky top-0">
       <div className="navbar-start">
         <Button color="ghost" onClick={homeOnClick}>
           <Logo />
@@ -23,9 +23,7 @@ export const Navbar: FC = memo(() => {
           About
         </Button>
       </div>
-      <div className="navbar-end">
-        <Button color="ghost">Contact</Button>
-      </div>
+      <div className="navbar-end"></div>
     </div>
   )
 })
