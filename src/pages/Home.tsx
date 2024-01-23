@@ -1,4 +1,4 @@
-import { memo, type FC } from "react"
+import { memo, type FC } from 'react'
 
 export const Home: FC = memo(() => {
   return (
@@ -8,6 +8,6 @@ export const Home: FC = memo(() => {
   )
 })
 
-Home.displayName = "Home"
+Home.displayName = 'Home'
 
 export default Home

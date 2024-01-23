@@ -1,7 +1,7 @@
-import { memo, type FC } from "react"
-import { ReactComponent as Logo } from "@/assets/logo.svg"
-import { Button } from "@/components"
-import { useNavbarContext } from "@/contexts"
+import { memo, type FC } from 'react'
+import { ReactComponent as Logo } from '@/assets/logo.svg'
+import { Button } from '@/components'
+import { useNavbarContext } from '@/contexts'
 
 export const Navbar: FC = memo(() => {
   const { aboutOnClick, componentOnClick, homeOnClick } = useNavbarContext()
@@ -13,6 +13,9 @@ export const Navbar: FC = memo(() => {
         </Button>
       </div>
       <div className="navbar-center">
+        <Button color="ghost" onClick={homeOnClick}>
+          Home
+        </Button>
         <Button color="ghost" onClick={componentOnClick}>
           Components
         </Button>
@@ -27,4 +30,4 @@ export const Navbar: FC = memo(() => {
   )
 })
 
-Navbar.displayName = "Navbar"
+Navbar.displayName = 'Navbar'
